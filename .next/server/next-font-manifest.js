@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/ibrahimadil/Downloads/nextjs-portfolio-master/src/app/layout\":[\"static/media/b3e13a4ac57b538e-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
