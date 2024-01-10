@@ -1,0 +1,12 @@
+{
+    "functions": {
+        "pages/api/contact-me/route.ts": {
+            "memory": 1024,
+            "maxDuration": 30
+        },
+        "pages/api/portfolios/route.ts": {
+            "memory": 1024,
+            "maxDuration": 30
+        }
+    }
+}

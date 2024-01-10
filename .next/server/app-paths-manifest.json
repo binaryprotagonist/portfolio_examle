@@ -2,5 +2,7 @@
   "/page": "app/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/contact/page": "app/contact/page.js",
-  "/api/contact-me/route": "app/api/contact-me/route.js"
+  "/portfolio/page": "app/portfolio/page.js",
+  "/portfolio/[category]/page": "app/portfolio/[category]/page.js",
+  "/api/portfolios/route": "app/api/portfolios/route.js"
 }

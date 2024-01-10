@@ -40,14 +40,6 @@
         "async": false
       }
     },
-    "(app-client)/./src/app/contact/page.tsx": {
-      "*": {
-        "id": "(sc_client)/./src/app/contact/page.tsx",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
     "(app-client)/./node_modules/next/dist/client/image-component.js": {
       "*": {
         "id": "(sc_client)/./node_modules/next/dist/client/image-component.js",
@@ -91,6 +83,22 @@
     "(app-client)/./src/components/pageTrans/PageTransistion.tsx": {
       "*": {
         "id": "(sc_client)/./src/components/pageTrans/PageTransistion.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/portfolio/[category]/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/portfolio/[category]/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./src/app/contact/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./src/app/contact/page.tsx",
         "name": "*",
         "chunks": [],
         "async": false
@@ -179,19 +187,11 @@
       ],
       "async": false
     },
-    "/Users/ibrahimadil/Downloads/nextjs-portfolio-master/src/app/contact/page.tsx": {
-      "id": "(app-client)/./src/app/contact/page.tsx",
-      "name": "*",
-      "chunks": [
-        "app/contact/page:static/chunks/app/contact/page.js"
-      ],
-      "async": false
-    },
     "/Users/ibrahimadil/Downloads/nextjs-portfolio-master/node_modules/next/dist/client/image-component.js": {
       "id": "(app-client)/./node_modules/next/dist/client/image-component.js",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/portfolio/page:static/chunks/app/portfolio/page.js"
       ],
       "async": false
     },
@@ -199,7 +199,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/image-component.js",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/portfolio/page:static/chunks/app/portfolio/page.js"
       ],
       "async": false
     },
@@ -207,7 +207,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "*",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/portfolio/page:static/chunks/app/portfolio/page.js"
       ],
       "async": false
     },
@@ -215,7 +215,7 @@
       "id": "(app-client)/./node_modules/next/dist/client/link.js",
       "name": "*",
       "chunks": [
-        "app/layout:static/chunks/app/layout.js"
+        "app/portfolio/page:static/chunks/app/portfolio/page.js"
       ],
       "async": false
     },
@@ -263,16 +263,45 @@
       "id": "(app-client)/./src/components/pageTrans/PageTransistion.tsx",
       "name": "*",
       "chunks": [
-        "app/page:static/chunks/app/page.js"
+        "app/portfolio/page:static/chunks/app/portfolio/page.js"
+      ],
+      "async": false
+    },
+    "/Users/ibrahimadil/Downloads/nextjs-portfolio-master/src/components/scrollableTechs/ScrollingIcons.module.css": {
+      "id": "(app-client)/./src/components/scrollableTechs/ScrollingIcons.module.css",
+      "name": "*",
+      "chunks": [
+        "app/portfolio/page:static/chunks/app/portfolio/page.js"
+      ],
+      "async": false
+    },
+    "/Users/ibrahimadil/Downloads/nextjs-portfolio-master/src/app/portfolio/[category]/page.tsx": {
+      "id": "(app-client)/./src/app/portfolio/[category]/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/portfolio/[category]/page:static/chunks/app/portfolio/[category]/page.js"
+      ],
+      "async": false
+    },
+    "/Users/ibrahimadil/Downloads/nextjs-portfolio-master/src/app/contact/page.tsx": {
+      "id": "(app-client)/./src/app/contact/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/contact/page:static/chunks/app/contact/page.js"
       ],
       "async": false
     }
   },
   "entryCSSFiles": {
-    "/Users/ibrahimadil/Downloads/nextjs-portfolio-master/src/app/contact/page": [],
     "/Users/ibrahimadil/Downloads/nextjs-portfolio-master/src/app/layout": [
       "static/css/app/layout.css"
     ],
-    "/Users/ibrahimadil/Downloads/nextjs-portfolio-master/src/app/page": []
+    "/Users/ibrahimadil/Downloads/nextjs-portfolio-master/src/app/page": [],
+    "/Users/ibrahimadil/Downloads/nextjs-portfolio-master/src/app/portfolio/page": [
+      "static/css/app/portfolio/page.css"
+    ],
+    "/Users/ibrahimadil/Downloads/nextjs-portfolio-master/src/app/portfolio/[category]/loading": [],
+    "/Users/ibrahimadil/Downloads/nextjs-portfolio-master/src/app/portfolio/[category]/page": [],
+    "/Users/ibrahimadil/Downloads/nextjs-portfolio-master/src/app/contact/page": []
   }
 }
