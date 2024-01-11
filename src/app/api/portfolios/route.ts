@@ -12,6 +12,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       message: "User created successfully",
       success: true,
+      status:'ok',
       data,
     });
   } catch (error: any) {

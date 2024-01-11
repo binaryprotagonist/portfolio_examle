@@ -4,6 +4,7 @@ import PageTransition from "@app/components/pageTrans/PageTransistion";
 import { cleanAndCapitalize } from "@app/utils/cleanAndCapitalize";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 import {
   SiRedux,
@@ -67,18 +68,43 @@ interface PData {
 
 const Category = ({ params }: { params: { category: string } }) => {
   const { category } = params;
-
+  // request: VercelRequest,
+  // response: VercelResponse,
   const [portfolioData, setPortfolioData] = useState<PData[]>([]);
 
   useEffect(() => {
-    fetch("/api/portfolios")
-      .then(async (res) => {
-        const { data } = await res.json();
-        setPortfolioData(data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
+    async function handler(
+      request: VercelRequest,
+      response: VercelResponse,
+    ) {
+      const apiUrl = '/api/portfolios';
+      try {
+        const apiResponse = await fetch(apiUrl);
+
+        if (apiResponse.ok) {
+          const { data } = await apiResponse.json();
+          setPortfolioData(data);
+          return response.status(200).json(data);
+        } else {
+          // Properly return an error response
+          return response.status(apiResponse.status).json({
+            message: `Failed to fetch data. API returned ${apiResponse.status}`,
+          });
+        }
+      } catch (error) {
+        // Forget to return an HTTP response, leading to a function timeout
+        console.error(`Error fetching data from ${apiUrl}: ${error}`);
+      }
+    }
+    handler()
+    // fetch("/api/portfolios")
+    //   .then(async (res) => {
+    //     const { data } = await res.json();
+    //     setPortfolioData(data);
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error fetching data:", error);
+    //   });
   }, []);
 
 
